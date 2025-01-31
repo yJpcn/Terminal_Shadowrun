@@ -1,0 +1,12 @@
+{
+    "year": "2087",
+    "serverAddress": "1822.safenet",
+    "serverName": "Dispositivo de Mensagem Criptografada Móvel",
+    "iconName": "network.png",
+    "terminalID": "IntraMatrix",
+    "defaultUser": {
+        "userId": "user",
+        "password": "",
+        "userName": "anonymous"
+    }
+}

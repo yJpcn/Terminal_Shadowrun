@@ -1,0 +1,348 @@
+/* vietnamese */
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(fonts/vietnamese.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(fonts/latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(fonts/latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inconsolata-Bold';
+  src: url('fonts/inconsolata-bold-webfont.woff2') format('woff2'),
+       url('fonts/inconsolata-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'Inconsolata-Regular';
+  src: url('fonts/inconsolata-regular-webfont.woff2') format('woff2'),
+       url('fonts/inconsolata-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+::selection {
+  background: #FF5E99;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-size: 11pt;
+  font-family: Inconsolata, monospace;
+  color: white;
+  background-color: black;
+}
+#container {
+  padding: .1em 1.5em 1em 1em;
+}
+#container output {
+  clear: both;
+  width: 100%;
+}
+#container output h3 {
+  margin: 0;
+}
+#container output pre {
+  margin: 0;
+}
+.input-line {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  clear: both;
+}
+.input-line > div:nth-child(2) {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+}
+.prompt {
+  white-space: nowrap;
+  color: #96b38a;
+  margin-right: 7px;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-orient: vertical;
+  display: box;
+  box-pack: center;
+  box-orient: vertical;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.cmdline {
+  outline: none;
+  background-color: transparent;
+  margin: 0;
+  width: 100%;
+  font: inherit;
+  border: none;
+  color: inherit;
+}
+.ls-files {
+  column-width: 100px;
+}
+
+/* Special FX */
+
+/* Recipe from: https://codepen.io/lbebber/pen/nqwBKK */
+.desync {
+  position: relative;
+}
+@keyframes noise-anim {
+  0% {
+    clip: rect(43px, 9999px, 23px, 0);
+  }
+  5% {
+    clip: rect(80px, 9999px, 23px, 0);
+  }
+  10% {
+    clip: rect(60px, 9999px, 42px, 0);
+  }
+  15% {
+    clip: rect(91px, 9999px, 98px, 0);
+  }
+  20% {
+    clip: rect(45px, 9999px, 9px, 0);
+  }
+  25% {
+    clip: rect(77px, 9999px, 16px, 0);
+  }
+  30% {
+    clip: rect(42px, 9999px, 57px, 0);
+  }
+  35% {
+    clip: rect(11px, 9999px, 14px, 0);
+  }
+  40% {
+    clip: rect(8px, 9999px, 61px, 0);
+  }
+  45% {
+    clip: rect(69px, 9999px, 89px, 0);
+  }
+  50% {
+    clip: rect(73px, 9999px, 52px, 0);
+  }
+  55% {
+    clip: rect(18px, 9999px, 97px, 0);
+  }
+  60% {
+    clip: rect(71px, 9999px, 5px, 0);
+  }
+  65% {
+    clip: rect(28px, 9999px, 97px, 0);
+  }
+  70% {
+    clip: rect(29px, 9999px, 63px, 0);
+  }
+  75% {
+    clip: rect(96px, 9999px, 60px, 0);
+  }
+  80% {
+    clip: rect(9px, 9999px, 83px, 0);
+  }
+  85% {
+    clip: rect(52px, 9999px, 24px, 0);
+  }
+  90% {
+    clip: rect(18px, 9999px, 5px, 0);
+  }
+  95% {
+    clip: rect(24px, 9999px, 20px, 0);
+  }
+  100% {
+    clip: rect(86px, 9999px, 100px, 0);
+  }
+}
+.desync:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(11px, 9999px, 11px, 0);
+  }
+  5% {
+    clip: rect(52px, 9999px, 78px, 0);
+  }
+  10% {
+    clip: rect(51px, 9999px, 75px, 0);
+  }
+  15% {
+    clip: rect(46px, 9999px, 53px, 0);
+  }
+  20% {
+    clip: rect(28px, 9999px, 48px, 0);
+  }
+  25% {
+    clip: rect(96px, 9999px, 68px, 0);
+  }
+  30% {
+    clip: rect(12px, 9999px, 33px, 0);
+  }
+  35% {
+    clip: rect(8px, 9999px, 74px, 0);
+  }
+  40% {
+    clip: rect(80px, 9999px, 37px, 0);
+  }
+  45% {
+    clip: rect(2px, 9999px, 48px, 0);
+  }
+  50% {
+    clip: rect(32px, 9999px, 39px, 0);
+  }
+  55% {
+    clip: rect(6px, 9999px, 48px, 0);
+  }
+  60% {
+    clip: rect(2px, 9999px, 12px, 0);
+  }
+  65% {
+    clip: rect(1px, 9999px, 24px, 0);
+  }
+  70% {
+    clip: rect(64px, 9999px, 78px, 0);
+  }
+  75% {
+    clip: rect(29px, 9999px, 92px, 0);
+  }
+  80% {
+    clip: rect(8px, 9999px, 66px, 0);
+  }
+  85% {
+    clip: rect(95px, 9999px, 99px, 0);
+  }
+  90% {
+    clip: rect(24px, 9999px, 70px, 0);
+  }
+  95% {
+    clip: rect(35px, 9999px, 64px, 0);
+  }
+  100% {
+    clip: rect(1px, 9999px, 54px, 0);
+  }
+}
+.desync:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+/* Recipe from: https://codepen.io/redouglas/pen/oNgqxV */
+.shimmer {
+  color: rgba(255, 255, 255, 0.4);
+  background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+  -webkit-background-size: 125px 100%;
+  -moz-background-size: 125px 100%;
+  background-size: 125px 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer;
+  -moz-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #222;
+}
+@-moz-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@-o-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+/* Recipe from: https://codepen.io/moklick/pen/nPZKXM */
+.glow {
+  animation: blur 0.75s ease-out infinite;
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+@keyframes blur {
+  from {
+    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff,
+      0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff,
+      0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff,
+      0px 0px 50px #7b96b8, 0px 0px 150px #7b96b8, 0px 10px 100px #7b96b8,
+      0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8,
+      0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8;
+  }
+}
