@@ -38,9 +38,9 @@ function setHeader( msg ) {
     initDateObject();
     const dateStr = `${ serverDate.day }/${ serverDate.month }/${ serverDate.year }`;
     const imgUrl = `config/network/${ serverDatabase.serverAddress }/${ serverDatabase.iconName }`;
-    const imgSize = serverDatabase.iconSize || 100;
+    //const imgSize = serverDatabase.iconSize || 300;
     const header = `
-    <img src="${ imgUrl }" width="${ imgSize }" height="${ imgSize }"
+    <img src="${ imgUrl }" width="${ 1024 }" height="${ 1024 }"
          style="float: left; padding-right: 10px" class="${ serverDatabase.iconClass || "" }">
     <h2 style="letter-spacing: 4px">${ serverDatabase.serverName }</h2>
     <p>Logged in: ${ serverDatabase.serverAddress } (&nbsp;${ dateStr }&nbsp;) </p>
