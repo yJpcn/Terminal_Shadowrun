@@ -1,0 +1,12 @@
+{
+    "year": "2087",
+    "serverAddress": "10.14.8.10.14.7.10.safenet",
+    "serverName": "Dispositivo de Mensagem Criptografada Móvel",
+    "iconName": "anhanga.png",
+    "terminalID": "IntraMatrix",
+    "defaultUser": {
+        "userId": "Anônimo",
+        "password": "",
+        "userName": "Anônimo"
+    }
+}
