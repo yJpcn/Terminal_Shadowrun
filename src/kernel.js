@@ -1,5 +1,5 @@
 // Global scope variables
-const defaultServerAddress = "1822.safenet";
+const defaultServerAddress = "10.14.8.10.14.7.10.safenet";
 let serverDatabase = {};
 let userDatabase = {};
 let userList = [];
