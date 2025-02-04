@@ -43,9 +43,10 @@ function setHeader( msg ) {
     <img src="${ imgUrl }" width="${ 256 }" height="${ 256 }"
          style="float: left; padding-right: 10px" class="${ serverDatabase.iconClass || "" }">
     <h2 style="letter-spacing: 4px">${ serverDatabase.serverName }</h2>
-    <p>Logged in: ${ serverDatabase.serverAddress } (&nbsp;${ dateStr }&nbsp;) </p>
+    <p>Você está conectado à: ${ serverDatabase.serverAddress } <br> 
+    (&nbsp;${ dateStr }&nbsp;) </p>
     ${ serverDatabase.headerExtraHTML || "" }
-    <p>Enter "help" for more information.</p>
+    <p> Conexão segura estabelecida; Serpens in hac silva caecus est. </p>
     `;
     // Clear content:
     output_.innerHTML = "";
@@ -206,7 +207,7 @@ kernel.connectToServer = function connectToServer( serverAddress, userName, pass
                 $.get( `config/network/${ serverInfo.serverAddress }/mailserver.json`, ( mails ) => {
                     mailList = mails;
                 } );
-                setHeader( "Connection successful" );
+                setHeader( "Usuário anônimo detectado; caso seja novo aqui, use o comando 'intro' para mais informações." );
                 resolve();
             } else if ( userName ) {
                 $.get( `config/network/${ serverInfo.serverAddress }/userlist.json`, ( users ) => {
