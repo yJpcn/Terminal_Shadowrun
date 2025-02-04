@@ -293,7 +293,7 @@ system = {
     quemsoueu() {
         return new Promise( ( resolve ) => {
             resolve(
-                `${ serverDatabase.serverAddress }/${ userDatabase.userId }`
+                `${ "Anhangá" }/${ userDatabase.userId }`
             );
         } );
     },
