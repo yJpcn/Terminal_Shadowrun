@@ -290,22 +290,22 @@ system = {
         } );
     },
 
-    whoami() {
+    quemsoueu() {
         return new Promise( ( resolve ) => {
             resolve(
-                `${ serverDatabase.serverAddress }/${ userDatabase.userId }`
+                `${ "Anhangá" }/${ userDatabase.userId }`
             );
         } );
     },
 
-    clear() {
+    limpar() {
         return new Promise( ( resolve ) => {
             setHeader();
             resolve( false );
         } );
     },
 
-    date() {
+    data() {
         return new Promise( ( resolve ) => {
             const date = new Date();
             const time = `${ date.getHours() }:${ date.getMinutes() }:${ date.getSeconds() }`;
@@ -319,7 +319,7 @@ system = {
         } );
     },
 
-    help( args ) {
+    ajuda( args ) {
         return new Promise( ( resolve ) => {
             const programs = allowedSoftwares();
             if ( args.length === 0 ) {
@@ -341,20 +341,20 @@ system = {
                     "You can navigate in the commands usage history using the UP & DOWN arrow keys.",
                     "The TAB key will provide command auto-completion."
                 ] );
-            } else if ( args[ 0 ] === "clear" ) {
-                resolve( [ "Usage:", "> clear", "The clear command will wipe the content of the terminal, but it will not affect the history." ] );
+            } else if ( args[ 0 ] === "limpar" ) {
+                resolve( [ "Usagem:", "> limpar", "Auto-explicativo." ] );
             } else if ( args[ 0 ] === "date" ) {
-                resolve( [ "Usage:", "> date", "The date command will print the current date-time into terminal." ] );
+                resolve( [ "Usagem:", "> data", "Mostra a data." ] );
             } else if ( args[ 0 ] === "echo" ) {
-                resolve( [ "Usage:", "> echo args", "The echo command will print args into terminal." ] );
+                resolve( [ "Usagem:", "> echo 'xxx'", "Repete a entrada que segue o comando." ] );
             } else if ( args[ 0 ] === "help" ) {
-                resolve( [ "Usage:", "> help", "The default help message. It will show the commands available on the server." ] );
+                resolve( [ "Usagem:", "> ajuda", "The default help message. It will show the commands available on the server." ] );
             } else if ( args[ 0 ] === "history" ) {
-                resolve( [ "Usage:", "> history", "The history command will list all the commands you alread typed in this terminal." ] );
+                resolve( [ "Usagem:", "> history", "The history command will list all the commands you alread typed in this terminal." ] );
             } else if ( args[ 0 ] === "login" ) {
-                resolve( [ "Usage:", "> login username:password", "Switch account: log in as another registered user on the server, to access your data files and messages." ] );
+                resolve( [ "Usagem:", "> login username:password", "Switch account: log in as another registered user on the server, to access your data files and messages." ] );
             } else if ( args[ 0 ] === "mail" ) {
-                resolve( [ "Usage:", "> mail", "If you're logged in you can list your mail messages if any." ] );
+                resolve( [ "Usagem:", "> mail", "If you're logged in you can list your mail messages if any." ] );
             } else if ( args[ 0 ] === "ping" ) {
                 resolve( [
                     "Usage:",
@@ -374,12 +374,12 @@ system = {
                     "You may need to specify a username if the server has no default user.",
                     "You may need to specify a password if the user account is protected."
                 ] );
-            } else if ( args[ 0 ] === "whoami" ) {
-                resolve( [ "Usage:", "> whoami", "Display the server you are currently connected to, and the login you are registered with." ] );
+            } else if ( args[ 0 ] === "quemsoueu" ) {
+                resolve( [ "Usage:", "> quemsoueu", "Display the server you are currently connected to, and the login you are registered with." ] );
             } else if ( args[ 0 ] in softwareInfo ) {
                 const customProgram = programs[ args[ 0 ] ];
-                if ( customProgram.help ) {
-                    resolve( [ "Usage:", `> ${ args[ 0 ] }`, customProgram.help ] );
+                if ( customProgram.ajuda ) {
+                    resolve( [ "Usage:", `> ${ args[ 0 ] }`, customProgram.ajuda ] );
                 }
             } else if ( args[ 0 ] in system && args[ 0 ] !== "dumpdb" ) {
                 console.error( `Missing help message for system command: ${ args[ 0 ] }` );
@@ -541,8 +541,8 @@ function userPasswordFrom( creds ) {
 function software( progName, program, args ) {
     return new Promise( ( resolve, reject ) => {
         if ( program ) {
-            if ( program.clear ) {
-                system.clear().then( runSoftware( progName, program, args ).then( resolve, reject ) );
+            if ( program.limpar ) {
+                system.limpar().then( runSoftware( progName, program, args ).then( resolve, reject ) );
             } else {
                 runSoftware( progName, program, args ).then( resolve, reject );
             }
