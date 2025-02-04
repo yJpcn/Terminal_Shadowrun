@@ -190,7 +190,7 @@ In the body, you can break the line with a double space.
 You can create your own custom software.
 At the moment you can just create simple software that will output some messages simulating an operation.
 
-You just need to create a `software.json` file describing your programs:
+You just need to create a `software.json` file describing your programs ([example](config/software.json)):
 
 - `message`: the actual message to be displayed as an emulation of the software running
 - `location` (optional): specify which servers will have access to the software (= where it is installed)
@@ -246,7 +246,7 @@ Special effects can be added to images by adding the `glitch` or `particle` CSS 
 
 ![](docs/demo-image-glitch.gif)
 
-The file provided includes demonstrations of those effects in the `demo.exe` command.
+The [config/software.json](config/software.json) file provided includes demonstrations of those effects in the `demo.exe` command.
 
 #### Text desync
 
