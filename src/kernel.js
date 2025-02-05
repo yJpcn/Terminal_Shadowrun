@@ -434,12 +434,12 @@ system = {
         } );
     },
 
-    history() {
+    /*history() {
         return new Promise( ( resolve ) => {
             const messageList = history_.map( ( line, i ) => `[${ i }] ${ line }` ); // eslint-disable-line no-undef
             resolve( messageList );
         } );
-    },
+    },*/
 
     mail() {
         return new Promise( ( resolve, reject ) => {
@@ -485,11 +485,11 @@ system = {
         } );
     },
 
-    telnet() {
+    /*telnet() {
         return new Promise( ( _, reject ) => {
             reject( new Error( "telnet is unsecure and is deprecated - use ssh instead" ) );
         } );
-    },
+    },*/
 
     ssh( args ) {
         return new Promise( ( resolve, reject ) => {
