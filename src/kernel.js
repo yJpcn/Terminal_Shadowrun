@@ -313,11 +313,11 @@ system = {
         } );
     },
 
-    echo( args ) {
+    /*echo( args ) {
         return new Promise( ( resolve ) => {
             resolve( args.join( " " ) );
         } );
-    },
+    },*/
 
     ajuda( args ) {
         return new Promise( ( resolve ) => {
