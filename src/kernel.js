@@ -483,7 +483,7 @@ system = {
         } );
     },*/
 
-    ssh( args ) {
+    conectar( args ) {
         return new Promise( ( resolve, reject ) => {
             if ( args === "" ) {
                 reject( new AddressIsEmptyError() );
@@ -495,7 +495,7 @@ system = {
             if ( serverAddress.includes( "@" ) ) {
                 const splitted = serverAddress.split( "@" );
                 if ( splitted.length !== 2 ) {
-                    reject( new InvalidCommandParameter( "ssh" ) );
+                    reject( new InvalidCommandParameter( "conectar" ) );
                     return;
                 }
                 serverAddress = splitted[ 1 ];
