@@ -137,7 +137,7 @@ function Terminal() {
                             output( error.message );
                         } else { // untyped = unexpected error
                             console.exception( error );
-                            output( `kernel failure - ${ error.constructor.name }: ${ error.message }` );
+                            output( `Falha de Kernel: - ${ error.constructor.name }: ${ error.message }` );
                         }
                     } );
             } catch ( error ) {

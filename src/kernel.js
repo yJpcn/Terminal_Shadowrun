@@ -313,11 +313,12 @@ system = {
         } );
     },
 
-    /*echo( args ) {
+    
+    intro() {
         return new Promise( ( resolve ) => {
-            resolve( args.join( " " ) );
+            output("teste");
         } );
-    },*/
+    },
 
     ajuda( args ) {
         return new Promise( ( resolve ) => {
@@ -340,7 +341,7 @@ system = {
                     `<div class="ls-files">${ cmdNames.join( "<br>" ) }</div>`,
                 ] );
             } else if ( args[ 0 ] === "limpar" ) {
-                resolve( [ "Sério? Você precisa que eu explique o que o comando 'limpar' faz?" ] );
+                resolve( [ "Limpa o terminal. Não seu passado, infelizmente." ] );
             } else if ( args[ 0 ] === "data" ) {
                 resolve( [ "Mostra a data. Não sei o que você esperava." ] );
             } /*else if ( args[ 0 ] === "echo" ) {
@@ -352,7 +353,7 @@ system = {
             }*/ else if ( args[ 0 ] === "login" ) {
                 resolve( [ "Logga você em sua conta; use usuário:senha. Se não tem credenciais ainda, provavelmente vai receber se voltar vivo do seu primeiro trabalho. Um grande se." ] );
             } else if ( args[ 0 ] === "caixa" ) {
-                resolve( [ "Sua caixa de mensagens. Se gosta de dinheiro, dá uma olhada. Se gosta ainda mais de continuar vivo, dá uma olhada." , "Sério. Dá uma olhada." ] );
+                resolve( [ "Sua caixa de mensagens. Cheque sempre. Exceto se você gosta de perder dinheiro e viver em baixo de uma pedra." , "Não sou sua babá." ] );
             } else if ( args[ 0 ] === "ping" ) {
                 resolve( [
                     "Checa se um endereço existe; digite ping endereço. Se teve uma resposta, parabéns, alguém tá ouvindo. Se não... Bem, ou você foi enganado, ou você é o próximo."
@@ -364,10 +365,13 @@ system = {
                     "Use conectar [endereço] para se conectar para o endereço que seja que seu contato tenha lhe passado. Se você recebeu um login, talvez até uma senha, use conectar usuario@endereço ou conectar usuario:senha@endereço.", "Tenha certeza que tá conectando para o lugar certo. O lugar errado talvez conecte de volta."
                 ] );
             } else if ( args[ 0 ] === "quemsoueu" ) {
-                resolve( [ "Como usar:", "> quemsoueu", "Mostra o server aonde você está conectado, e seu login atual. Se é sua primeira vez aqui, provavelmente é anônimo; seu contato vai registrar uma conta depois." ] );
+                resolve( [ "Mostra sua conexão e login atual. Se é sua primeira aqui, provavelmente está em acesso anônimo. Talvez isso mude." ] );
             } 
               else if ( args[ 0 ] === "sair" ) {
                 resolve( [ "Disconecta você do server atual. Te traz de volta pra mim. Espero que achou o que procurava." ] );
+            }
+            else if ( args[ 0 ] === "logout" ) {
+                resolve( [ "Te desloga da conta atual. Às vezes, desaparecer é a melhor opção." ] );
             }else if ( args[ 0 ] in softwareInfo ) {
                 const customProgram = programs[ args[ 0 ] ];
                 if ( customProgram.ajuda ) {
