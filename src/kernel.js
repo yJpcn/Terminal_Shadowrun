@@ -320,8 +320,8 @@ system = {
             output("Esse dispositivo e a rede a qual ele conecta existe porque informação é poder, e há muito tempo tem informação demais nas mãos das pessoas erradas. As ruas sussurram, as corporações escutam, e o Grande Dragão segura o que resta da Pátria pelos ovos."); 
             output("Se você quer continuar sendo runner, você precisa de lugares onde até ele não chega. Como a minha conexão.");
             output("Não sei quem te entregou esse terminal. Talvez um amigo, ou um contato, ou alguém que você não deva confiar. Não me importa. Eu apenas forneço as ferramentas. Como você usa, é com você.");
-            output("*Se você não sabe o que fazer, use o comando ajuda. Quiçá isso te impeça de quebrar esse negócio.*");
-            output("*Ut supra, ut infra*.");
+            output(<i>"Se você não sabe o que fazer, use o comando ajuda. Quiçá isso te impeça de quebrar esse negócio."</i>);
+            output(<i>"Ut supra, ut infra."</i>);
             output("— Anhangá")
         } );
     },
