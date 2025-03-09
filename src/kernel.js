@@ -362,8 +362,8 @@ system = {
                     "The ping command will try to reach a valid address.",
                     "If the ping doesn't return a valid response, the address may be incorrect, may not exist or can't be reached locally."
                 ] );
-            } else if ( args[ 0 ] === "read" ) {
-                resolve( [ "Usage:", "> read x", "If you're logged in you can read your mail messages if any." ] );
+            } else if ( args[ 0 ] === "ler" ) {
+                resolve( [ "Como usar:", "> ler x(o número à esquerda da mensagem)", "Usado para ler as mensagens da sua caixa." ] );
             } else if ( args[ 0 ] === "ssh" ) {
                 resolve( [
                     "Usage:",
@@ -375,7 +375,7 @@ system = {
                     "You may need to specify a password if the user account is protected."
                 ] );
             } else if ( args[ 0 ] === "quemsoueu" ) {
-                resolve( [ "Usage:", "> quemsoueu", "Display the server you are currently connected to, and the login you are registered with." ] );
+                resolve( [ "Como usar:", "> quemsoueu", "Mostra o server aonde você está conectado, e seu login atual. Se é sua primeira vez aqui, provavelmente é anônimo; seu contato vai registrar uma conta depois." ] );
             } else if ( args[ 0 ] in softwareInfo ) {
                 const customProgram = programs[ args[ 0 ] ];
                 if ( customProgram.ajuda ) {
@@ -428,7 +428,7 @@ system = {
         } );
     },
 
-    exit() {
+    sair() {
         return new Promise( () => {
             location.reload();
         } );
@@ -453,7 +453,7 @@ system = {
         } );
     },
 
-    read( args ) {
+    ler( args ) {
         return new Promise( ( resolve, reject ) => {
             const mailIndex = Number( args[ 0 ] );
             const mailAtIndex = mailList[ mailIndex ];
