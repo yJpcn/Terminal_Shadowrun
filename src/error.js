@@ -5,84 +5,84 @@ class FunctionalError extends Error {}
 class CommandNotFoundError extends FunctionalError {
     constructor( command ) {
         super();
-        this.message = `${ command }: command not found`;
+        this.message = `${ command }: Comando não achado.`;
     }
 }
 
 class InvalidCommandParameter extends FunctionalError {
     constructor( command ) {
         super();
-        this.message = `Invalid parameters pased to command ${ command }`;
+        this.message = `Parâmetros inválidos passados para o comando ${ command }`;
     }
 }
 
 class AddressNotFoundError extends FunctionalError {
     constructor( address ) {
         super();
-        this.message = `Error : address ${ address } can't be reached`;
+        this.message = `Erro : endereço ${ address } não foi encontrado.`;
     }
 }
 
 class AddressIsEmptyError extends FunctionalError {
     constructor() {
         super();
-        this.message = "Error: You need to specify an address";
+        this.message = "Erro: você tem que especificar um endereço!";
     }
 }
 
 class UsernameIsEmptyError extends FunctionalError {
     constructor() {
         super();
-        this.message = "Empty user name provided";
+        this.message = "Erro: Nome de usuário vazio.";
     }
 }
 
 class InvalidCredsSyntaxError extends FunctionalError {
     constructor() {
         super();
-        this.message = "Invalid syntax for credentials provided: either provide just a username, or username:password";
+        this.message = "Erro: sintaxe de credenciais errada: use só um usuário, ou usuário:senha.";
     }
 }
 
 class InvalidPasswordError extends FunctionalError {
     constructor( userName ) {
         super();
-        this.message = `Invalid password provided for ${ userName }`;
+        this.message = `Senha inválida para o usuário ${ userName }.`;
     }
 }
 
 class MailServerIsEmptyError extends FunctionalError {
     constructor() {
         super();
-        this.message = "There is no new mail registered.";
+        this.message = "Nenhuma mensagem registrada.";
     }
 }
 
 class InvalidMessageKeyError extends FunctionalError {
     constructor() {
         super();
-        this.message = "Invalid message key.";
+        this.message = "Número de mensagem inválida.";
     }
 }
 
 class AlreadyOnServerError extends FunctionalError {
     constructor( serverAddress ) {
         super();
-        this.message = `You already are at ${ serverAddress }`;
+        this.message = `Você já está conectado à ${ serverAddress }`;
     }
 }
 
 class UnknownUserError extends FunctionalError {
     constructor( userName ) {
         super();
-        this.message = `Unknown user ${ userName }`;
+        this.message = `Usuário ${ userName } desconhecido.`;
     }
 }
 
 class ServerRequireUsernameError extends FunctionalError {
     constructor( serverAddress ) {
         super();
-        this.message = `Server require a username to be accessed: ssh username@${ serverAddress }`;
+        this.message = `Endereço precisa de um usuário para ser acessado; use conectar usuário@${ serverAddress }`;
     }
 }
 
