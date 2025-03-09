@@ -341,7 +341,7 @@ system = {
                 ] );
             } else if ( args[ 0 ] === "limpar" ) {
                 resolve( [ "Sério? Você precisa que eu explique o que o comando 'limpar' faz?" ] );
-            } else if ( args[ 0 ] === "date" ) {
+            } else if ( args[ 0 ] === "data" ) {
                 resolve( [ "Mostra a data. Não sei o que você esperava." ] );
             } /*else if ( args[ 0 ] === "echo" ) {
                 resolve( [ "Usagem:", "> echo 'xxx'", "Repete a entrada que segue o comando." ] );
@@ -350,7 +350,7 @@ system = {
             } /*else if ( args[ 0 ] === "history" ) {
                 resolve( [ "Usagem:", "> history", "The history command will list all the commands you alread typed in this terminal." ] );
             }*/ else if ( args[ 0 ] === "login" ) {
-                resolve( [ "Logga você em sua conta; use usuário:senha. Se não tem credenciais ainda, provavelmente vai receber se voltar vivo do seu primeiro trabalho. Provavelmente." ] );
+                resolve( [ "Logga você em sua conta; use usuário:senha. Se não tem credenciais ainda, provavelmente vai receber se voltar vivo do seu primeiro trabalho. Um grande se." ] );
             } else if ( args[ 0 ] === "caixa" ) {
                 resolve( [ "Sua caixa de mensagens. Se gosta de dinheiro, dá uma olhada. Se gosta ainda mais de continuar vivo, dá uma olhada." , "Sério. Dá uma olhada." ] );
             } else if ( args[ 0 ] === "ping" ) {
@@ -365,7 +365,10 @@ system = {
                 ] );
             } else if ( args[ 0 ] === "quemsoueu" ) {
                 resolve( [ "Como usar:", "> quemsoueu", "Mostra o server aonde você está conectado, e seu login atual. Se é sua primeira vez aqui, provavelmente é anônimo; seu contato vai registrar uma conta depois." ] );
-            } else if ( args[ 0 ] in softwareInfo ) {
+            } 
+              else if ( args[ 0 ] === "sair" ) {
+                resolve( [ "Disconecta você do server atual. Te traz de volta pra mim. Espero que achou o que procurava." ] );
+            }else if ( args[ 0 ] in softwareInfo ) {
                 const customProgram = programs[ args[ 0 ] ];
                 if ( customProgram.ajuda ) {
                     resolve( [ "Usage:", `> ${ args[ 0 ] }`, customProgram.ajuda ] );
@@ -373,7 +376,7 @@ system = {
             } else if ( args[ 0 ] in system && args[ 0 ] !== "dumpdb" ) {
                 console.error( `Missing help message for system command: ${ args[ 0 ] }` );
             } else {
-                resolve( [ `Unknow command ${ args[ 0 ] }` ] );
+                resolve( [ `Comando desconhecido ${ args[ 0 ] }; certeza que digitou o comando certo?` ] );
             }
         } );
     },
