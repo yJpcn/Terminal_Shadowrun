@@ -335,44 +335,33 @@ system = {
                 Array.prototype.push.apply( cmdNames, progNames );
                 cmdNames.sort();
                 resolve( [
-                    "You can read the help of a specific command by entering as follows: 'help commandName'",
-                    "List of useful commands:",
+                    "Quer ajuda? Já está melhor do que a maioria dos runners. Digite ajuda seguido de um comando para saber mais.",
+                    "De todo jeito, aqui estão os comandos que você tem acesso atualmente:",
                     `<div class="ls-files">${ cmdNames.join( "<br>" ) }</div>`,
-                    "You can navigate in the commands usage history using the UP & DOWN arrow keys.",
-                    "The TAB key will provide command auto-completion."
                 ] );
             } else if ( args[ 0 ] === "limpar" ) {
-                resolve( [ "Usagem:", "> limpar", "Auto-explicativo." ] );
+                resolve( [ "Sério? Você precisa que eu explique o que o comando 'limpar' faz?" ] );
             } else if ( args[ 0 ] === "date" ) {
-                resolve( [ "Usagem:", "> data", "Mostra a data." ] );
-            } else if ( args[ 0 ] === "echo" ) {
+                resolve( [ "Mostra a data. Não sei o que você esperava." ] );
+            } /*else if ( args[ 0 ] === "echo" ) {
                 resolve( [ "Usagem:", "> echo 'xxx'", "Repete a entrada que segue o comando." ] );
-            } else if ( args[ 0 ] === "help" ) {
-                resolve( [ "Usagem:", "> ajuda", "The default help message. It will show the commands available on the server." ] );
-            } else if ( args[ 0 ] === "history" ) {
+            }*/ else if ( args[ 0 ] === "ajuda" ) {
+                resolve( [ "Você sabe o que isso aqui faz." ] );
+            } /*else if ( args[ 0 ] === "history" ) {
                 resolve( [ "Usagem:", "> history", "The history command will list all the commands you alread typed in this terminal." ] );
-            } else if ( args[ 0 ] === "login" ) {
-                resolve( [ "Usagem:", "> login username:password", "Switch account: log in as another registered user on the server, to access your data files and messages." ] );
-            } else if ( args[ 0 ] === "mail" ) {
-                resolve( [ "Usagem:", "> mail", "If you're logged in you can list your mail messages if any." ] );
+            }*/ else if ( args[ 0 ] === "login" ) {
+                resolve( [ "Logga você em sua conta; use usuário:senha. Se não tem credenciais ainda, provavelmente vai receber se voltar vivo do seu primeiro trabalho. Provavelmente." ] );
+            } else if ( args[ 0 ] === "caixa" ) {
+                resolve( [ "Sua caixa de mensagens. Se gosta de dinheiro, dá uma olhada. Se gosta ainda mais de continuar vivo, dá uma olhada." , "Sério. Dá uma olhada." ] );
             } else if ( args[ 0 ] === "ping" ) {
                 resolve( [
-                    "Usage:",
-                    "> ping address",
-                    "The ping command will try to reach a valid address.",
-                    "If the ping doesn't return a valid response, the address may be incorrect, may not exist or can't be reached locally."
+                    "Checa se um endereço existe; digite ping endereço. Se teve uma resposta, parabéns, alguém tá ouvindo. Se não... Bem, ou você foi enganado, ou você é o próximo."
                 ] );
             } else if ( args[ 0 ] === "ler" ) {
-                resolve( [ "Como usar:", "> ler x(o número à esquerda da mensagem)", "Usado para ler as mensagens da sua caixa." ] );
-            } else if ( args[ 0 ] === "ssh" ) {
+                resolve( [ "Lê uma mensagem da sua caixa. Escreva ler e o número à esquerda da mensagem pra a abrir. Pode ser um trabalho. Ou uma ameaça de morte. Não fazemos pré-checagem." ] );
+            } else if ( args[ 0 ] === "conectar" ) {
                 resolve( [
-                    "Usage:",
-                    "> ssh address",
-                    "> ssh username@address",
-                    "> ssh username:password@address",
-                    "You can connect to a valid address to access a specific server on the Internet.",
-                    "You may need to specify a username if the server has no default user.",
-                    "You may need to specify a password if the user account is protected."
+                    "Use conectar [endereço] para se conectar para o endereço que seja que seu contato tenha lhe passado. Se você recebeu um login, talvez até uma senha, use conectar usuario@endereço ou conectar usuario:senha@endereço.", "Tenha certeza que tá conectando para o lugar certo. O lugar errado talvez conecte de volta."
                 ] );
             } else if ( args[ 0 ] === "quemsoueu" ) {
                 resolve( [ "Como usar:", "> quemsoueu", "Mostra o server aonde você está conectado, e seu login atual. Se é sua primeira vez aqui, provavelmente é anônimo; seu contato vai registrar uma conta depois." ] );
