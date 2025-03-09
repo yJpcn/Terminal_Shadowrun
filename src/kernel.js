@@ -441,7 +441,7 @@ system = {
         } );
     },*/
 
-    mail() {
+    caixa() {
         return new Promise( ( resolve, reject ) => {
             const messageList = mailList.filter( ( mail ) => mail.to.includes( userDatabase.userId ) )
                 .map( ( mail, i ) => `[${ i }] ${ mail.title }` );
