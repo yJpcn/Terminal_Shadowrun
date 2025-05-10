@@ -320,7 +320,7 @@ system = {
             output("Esse dispositivo e a rede a qual ele conecta existem porque informação é poder, e há muito tempo tem informação demais nas mãos das pessoas erradas. As ruas sussurram, as corporações escutam, e o Grande Dragão segura o que resta da Pátria pelos ovos."); 
             output("Se você quer continuar sendo runner, você precisa de lugares onde até ele não chega. Como a minha conexão.");
             output("Não sei quem te entregou esse terminal. Talvez um amigo, ou um contato, ou alguém que você não deva confiar. Não me importa. Eu apenas forneço as ferramentas. Como você usa, é com você.");
-            output("Se você não sabe o que fazer, use o comando ajuda. Quiçá isso te impeça de quebrar esse negócio.");
+            output("Se você não sabe o que fazer, use o comando ajuda. Ou então dá uma olhada na caixa. Vai que quem te mandou isso aqui teve a decência de deixar uma mensagem primeiro.");
             output("Ut supra, ut infra.");
             output("— Anhangá")
         } );
@@ -359,13 +359,13 @@ system = {
             }*/ else if ( args[ 0 ] === "login" ) {
                 resolve( [ "Logga você em sua conta; use usuário:senha. Se não tem credenciais ainda, provavelmente vai receber se voltar vivo do seu primeiro trabalho. Um grande se." ] );
             } else if ( args[ 0 ] === "caixa" ) {
-                resolve( [ "Sua caixa de mensagens. Cheque sempre. Exceto se você gosta de perder dinheiro e viver em baixo de uma pedra." , "Não sou sua babá." ] );
+                resolve( [ "Sua caixa de mensagens; lida com o comando ler. Cheque sempre. Exceto se você gosta de perder dinheiro e viver em baixo de uma pedra." , "Não sou sua babá." ] );
             } else if ( args[ 0 ] === "ping" ) {
                 resolve( [
                     "Checa se um endereço existe; digite ping endereço. Se teve uma resposta, parabéns, alguém tá ouvindo. Se não... Bem, ou você foi enganado, ou você é o próximo."
                 ] );
             } else if ( args[ 0 ] === "ler" ) {
-                resolve( [ "Lê uma mensagem da sua caixa. Escreva ler e o número à esquerda da mensagem pra a abrir. Pode ser um trabalho. Ou uma ameaça de morte. Não fazemos pré-checagem." ] );
+                resolve( [ "Lê uma mensagem da sua caixa. Escreva ler e o número à esquerda da mensagem pra a abrir; como 'ler 0', ou 'ler 1'. Pode ser um trabalho. Ou uma ameaça de morte. Não fazemos pré-checagem." ] );
             } else if ( args[ 0 ] === "conectar" ) {
                 resolve( [
                     "Use conectar [endereço] para se conectar para o endereço que seja que seu contato tenha lhe passado. Se você recebeu um login, talvez até uma senha, use conectar usuario@endereço ou conectar usuario:senha@endereço.", "Tenha certeza que tá conectando para o lugar certo. O lugar errado talvez conecte de volta."
